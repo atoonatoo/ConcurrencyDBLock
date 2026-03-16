@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ConcurrencyDB
+  datasource:
+    url: jdbc:h2:mem:test_db
+    driver-class-name: org.h2.Driver
+    username: root
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql:
+        use_sql_comments: false
+        highlight_sql: true
+
+logging:
+  level:
+    root: info
+    org.hibernate.SQL: off
